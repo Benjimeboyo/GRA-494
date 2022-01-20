@@ -1,0 +1,39 @@
+<h1>Unix Basics and Git Practice</h1>
+
+<p>Please follow these instructions referencing <a href="http://www.mathcs.emory.edu/~valerie/courses/fall10/155/resources/unix_cheatsheet.html">this guide</a> to get a better understanding of the basics of working with the command line. This will
+	also include some git best practices.</p>
+
+<p>Two of the most basic and practical unix commands are <code>ls</code> and <code>cd</code>. <code>ls</code> will list the contents of your current directory while <code>cd</code> allows you to change your current directory.</p>
+
+<ol>
+	<li>In terminal (or other unix command line) enter the command <code>cd ~</code> to ensure you are at your home directory.</li>
+	<li>From here, enter the command <code>ls</code>. This will show you all files and directories that exist in your home directory.</li>
+	<li>Enter the command <code>mkdir unix-test</code>. This will create a new folder in your home directory with the name "unix-test".</li>
+	<li>Navigate into this new folder with the command <code>cd unix-test</code>.</li>
+</ol>
+
+<p>Navigating the file system this way is very useful when working in a git repository, as you may want to commit only the file changes in an existing directory.</p>
+
+<ol>
+	<li>Navigate back to your home directory. Using the above commands, navigate from the home directory to the directory you initialized your git repo in.</li>
+	<li>Once in your git repo root directory (the directory <code>git init</code> was run in), enter the command <code>git status</code>.</li>
+	<li>Git status shows you where your local repo is in reference to what was last pushed to your repo. It will list all unpushed commits, all files staged for committing, and all untracked files.</li>
+	<li>Before working on your repo, it is always best to run <code>git pull</code> or <code>get fetch</code> to ensure you are working with the most recent changes. Run the command <code>git pull</code>.</li>
+</ol>
+
+<p>Now that you know the status of your working directory. Lets make and push a basic change.</p>
+
+<ol>
+	<li>In your text editor of choice, create a new .txt file in your repo named "unix-basics.txt".</li>
+	<li>Referencing the unix cheat sheet, see if you can figure out how to add text to the file from the command line. If you are stuck, discuss with your fellow classmates before asking me for help.</li>
+	<li>Once you have added text to the file, from the command line run <code>git status</code>. You should now see yout .txt file as an untracked change.</li>
+	<li>Run the command <code>git add .</code> followed by the command <code>git status</code>. You should now see that the new file has transitioned from untracked to staged.</li>
+</ol>
+
+<p>Now that you have made changes, we can commit and push these changes to your remote repo.</p>
+
+<ol>
+	<li>From the command line, you will now run <code>git commit -m "message here"</code>. Instead of "message here", please enter a messsage you think briefly describes the change you are making.</li>
+	<li>Run the command <code>git status</code> once again to ensure that you have a new commit to be pushed to your remote repository.</li>
+	<li>Run the command <code>git push</code> to push your code to the remote. If you get any kind of feedback at this stage that the code was not pushed successfully, please let me know and I will assist you.</li>
+</ol>
